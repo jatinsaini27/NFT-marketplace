@@ -1,0 +1,51 @@
+.NFTTabs {
+    width: 100%;
+}
+
+.NFTTabs_box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--shadow-dark-color);
+}
+
+.NFTTabs_box_img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.NFTTabs_box_info {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 6px;
+}
+
+.NFTTabs_box_info_name {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    /* small gap between name and icon */
+    font-weight: 700;
+}
+
+.NFTTabs_box_info_name span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.NFTTabs_box_info_name svg {
+    color: #1DA1F2;
+    /* Twitter blue color for verified badge */
+    font-size: 1rem;
+}
+
+.NFTTabs_box_info small {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+}

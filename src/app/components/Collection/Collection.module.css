@@ -1,0 +1,128 @@
+.collection {
+    width: 100%;
+    max-width: 1200px;
+    /* Set a max-width to keep content centered on large screens */
+    margin: 0 auto;
+    /* Centers the container */
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Centers the content horizontally */
+}
+
+/* Title Section */
+.collection_title {
+    width: 35rem;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.collection_title h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Button Container */
+.collection_collections_btn {
+    background-color: var(--main-bg-color);
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: var(--box-shadow);
+    margin: 0 auto;
+    /* Ensures the button container is centered */
+}
+
+/* Buttons */
+.collection_collections_btn button {
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    border: 1px solid var(--icons-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Advanced Animation */
+.collection_collections_btn button:hover {
+    background-color: var(--main-bg-color);
+    color: var(--icons-color);
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Hover Ripple Effect */
+.collection_collections_btn button::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease-out;
+}
+
+.collection_collections_btn button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+/* Grid Layout for Cards - Display only 3 per row */
+.collection_box {
+    width: 85%;
+    max-width: 1200px;
+    /* Ensure the grid container has a max-width */
+    margin: 0 auto;
+    /* Centers the grid container */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Ensures 3 cards per row */
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .collection_collections_btn {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    /* Adjust grid for smaller screens */
+    .collection_box {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .collection_box {
+        grid-template-columns: 1fr;
+        /* 1 card per row on small screens */
+    }
+
+    .collection_title {
+        width: 100%;
+    }
+}

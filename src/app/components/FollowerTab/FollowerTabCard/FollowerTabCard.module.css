@@ -1,0 +1,131 @@
+.FollowerTabCard_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Ensures responsive layout */
+    gap: 1rem;
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
+    align-items: start;
+    /* Ensures consistent top alignment */
+}
+
+.FollowerTabCard_box:hover {
+    box-shadow: var(--box-shadow);
+}
+
+/* Rank Badge */
+.FollowerTabCard_rank {
+position: absolute;
+    z-index: 11111;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    line-height: 2;
+    margin: 2rem;
+    font-size: 1rem;
+    /* Reduced font size */
+    padding: 0.15rem 1.35rem;
+    /* Adjusted padding */
+    border-radius: 2rem;
+    border: 1px solid var(--icons-color);
+    transition: all 0.3s ease-in;
+}
+
+/* Card Image */
+.FollowerTabCard_box_img {
+    width: 100%;
+    height: 180px;
+    /* Set fixed height */
+    overflow: hidden;
+}
+
+.FollowerTabCard_box_img_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image doesn't stretch */
+    border-radius: 1rem;
+}
+
+/* Profile Image */
+.FollowerTabCard_box_profile {
+    text-align: center;
+    margin-top: -1.5rem;
+    position: relative;
+}
+
+.FollowerTabCard_box_profile_img {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--main-bg-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+}
+
+/* Profile Info */
+.FollowerTabCard_box_info {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* Spreads items evenly */
+    padding: 0.5rem 1rem;
+    margin-top: -1rem;
+}
+
+.FollowerTabCard_box_info_name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Space between name, icon, and ETH */
+}
+
+.FollowerTabCard_box_info_name h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    /* Keeps verified icon close */
+    margin: 0;
+}
+
+.FollowerTabCard_box_info_name span {
+    display: flex;
+    align-items: center;
+    color: #1DA1F2;
+    /* Verified icon color */
+    font-size: 1rem;
+}
+
+.FollowerTabCard_box_info_name p {
+    font-size: 1rem;
+    color: gray;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Follow Button */
+.FollowerTabCard_box_info_following a {
+    background-color: var(--shadow-dark-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--shadow-dark-color);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.FollowerTabCard_box_info_following a:hover {
+    background-color: transparent;
+}

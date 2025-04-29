@@ -1,0 +1,102 @@
+.sliderCard {
+    padding: 1rem;
+}
+
+.sliderCard_box {
+    transition: all 0.3s ease-in;
+    border-radius: 2rem;
+    /* Fixed the incorrect border syntax */
+    padding-bottom: 1rem;
+    background-color: var(--main-bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensure consistent height */
+}
+
+/* Hover effect */
+.sliderCard_box:hover {
+    box-shadow: var(--box-shadow);
+}
+
+/* Image container */
+.sliderCard_box_img_img {
+    border-radius: 2rem;
+    width: 100%;
+    height: 200px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+}
+
+/* Title section */
+.sliderCard_box_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sliderCard_box_title p {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+/* Like section */
+.sliderCard_box_title_like {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sliderCard_box_title_like small {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--icons-color);
+}
+
+/* Price section */
+.sliderCard_box_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    gap: 1rem;
+    margin-top: auto;
+    /* Pushes price section to bottom */
+    text-align: center;
+}
+
+.sliderCard_box_price_box {
+    border: 1px solid var(--icons-color);
+    padding: 0.2rem 1rem;
+    border-radius: 0.2rem;
+}
+
+.sliderCard_box_price_box small {
+    background-color: var(--icons-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    color: var(--main-bg-color);
+}
+
+.sliderCard_box_price_box p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.3rem 0 0 0;
+}
+
+/* Countdown or time section */
+.sliderCard_box_price_time {
+    display: grid;
+    align-items: end;
+}
+
+.sliderCard_box_price_time p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0;
+}

@@ -1,0 +1,29 @@
+.title {
+    width: 100%;
+}
+
+.title_box {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.title_box h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 425px) {
+    .title_box {
+        width: 90%;
+        padding: 1.5rem 0;
+    }
+
+    .title_box h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+}

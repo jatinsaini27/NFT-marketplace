@@ -1,0 +1,30 @@
+.SearchBar {
+    width: 100%;
+}
+
+/* Inner Search Box */
+.SearchBar_box {
+    width: 40%;
+    margin: 2.7rem auto 3rem auto;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    gap: 1rem;
+}
+
+/* Input field inside the Search Box */
+.SearchBar_input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    /* visible text color */
+    border-radius: 5rem;
+}

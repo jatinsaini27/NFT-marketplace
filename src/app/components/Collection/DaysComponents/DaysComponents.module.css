@@ -1,0 +1,119 @@
+
+.daysComponent{
+display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Ensures responsive layout */
+    gap: 1rem;
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
+    align-items: start;
+}
+
+.daysComponent:hover{
+    box-shadow:var(--box-shadow);
+}
+
+.daysComponent_box_img_img{
+    border-radius: 1rem;
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+}
+
+.daysComponent_box_profile{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:.5rem;
+
+    margin-top: .5rem;
+}
+
+.daysComponent_box_img_1{
+    border-bottom-left-radius: 1rem;
+}
+.daysComponent_box_img_3{
+    border-bottom-right-radius: 1rem;
+}
+
+.daysComponent_box_title{
+    padding:1rem 2rem;
+    line-height: 1.8;
+}
+
+.daysComponent_box_title_info{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.daysComponent_box_title_info_profile_img{
+    border-radius: 50%;
+}
+.daysComponent_box_title_info_profile span{
+font-weight: 600;
+
+display: flex;
+    align-items: center;
+
+
+}
+
+.daysComponent_box_title_info_price small{
+    font-weight:600;
+    border:3px solid var(--icons-color);
+    padding: .5rem;
+    border-radius: .5rem;
+
+}
+
+@media screen and (min-device-width:320px) and (max-device-width:760px){
+    .daysComponent_box_profile{
+        grid-template-columns: repeat(3,1fr);
+       
+    }
+
+    .daysComponent_box_title_info{
+        flex-direction: column;
+      
+        gap: 2rem;
+        align-items: flex-start;
+        padding:1rem;
+    }
+}
+
+.daysComponent_box_title{
+    padding:1rem;
+}
+
+.daysComponent_box_title_info_profile{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.daysComponent_box_title h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.verifiedIcon {
+    color: blue;
+    /* Makes the icon blue */
+    font-size: 1rem;
+    /* Adjust icon size */
+}
+
+.daysComponent_box_title_info_profile p{
+    font-weight: bold;
+    font-size:.9rem;
+}

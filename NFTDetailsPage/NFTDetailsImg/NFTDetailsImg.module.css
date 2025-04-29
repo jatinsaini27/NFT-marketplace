@@ -1,0 +1,90 @@
+:root {
+    --main-bg-color: #ffffff;
+    --icons-color: #333333;
+    --icons-bg-color: #f5f5f5;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.NFTDetailsImg {
+    width: 100%;
+}
+
+.NFTDetailsImg_box_NFT {
+    display: grid;
+    position: relative;
+}
+
+.NFTDetailsImg_box_NFT_img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.NFTDetailsImg_box_NFT_img_img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    display: block;
+}
+
+.NFTDetailsImg_box_NFT_like {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 10;
+    align-self: flex-start;
+    padding-inline: 2rem;
+    margin-top: 1rem;
+}
+
+.NFTDetailsImg_box_NFT_like p {
+    background-color: var(--icons-color);
+    padding: .2rem 1rem;
+    color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.NFTDetailsImg_box_NFT_like p:hover {
+    background-color: #555;
+}
+
+.NFTDetailsImg_box_NFT_like_icon {
+    font-size: 1.4rem;
+}
+
+.NFTDetailsImg_box_details,
+.NFTDetailsImg_box_description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--icons-bg-color);
+    border-radius: .5rem;
+    padding-inline: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.NFTDetailsImg_box_details:hover,
+.NFTDetailsImg_box_description:hover {
+    background-color: #e0e0e0;
+}
+
+.NFTDetailsImg_box_details_box,
+.NFTDetailsImg_box_description_box {
+    padding: .1rem 1rem;
+    font-size: 1rem;
+}
+
+.NFTDetailsImg_box_details_box p {
+    line-height: 1.5;
+    font-size: 1rem;
+}

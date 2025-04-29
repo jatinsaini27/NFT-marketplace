@@ -1,0 +1,144 @@
+/* 🔥 Service Section */
+.service {
+    width: 80%;
+    margin: 3rem auto;
+    margin-block: 8rem;
+}
+
+/* 🎨 Service Box Grid */
+.service_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    text-align: center;
+}
+
+/* 🔥 Animated Service Box Item */
+.service_box_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    /* Light gradient */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out, background 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+
+/* 🌟 Colorful Hover Effects */
+.service_box_item:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    /* Gradient changes */
+    box-shadow: 0px 15px 30px rgba(255, 69, 0, 0.3);
+    /* Stronger shadow */
+    border-color: rgba(255, 69, 0, 0.6);
+}
+
+/* 💡 Shimmer Glow Effect */
+.service_box_item::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.service_box_item:hover::before {
+    opacity: 1;
+}
+
+/* 🔄 Rotate & Bounce Image on Hover */
+.service_box_item img {
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease-in-out;
+}
+
+.service_box_item:hover img {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* 📍 Step Number Animation */
+.service_box_item_step {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--shadow-dark-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.service_box_item_step span {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Step Hover Effect */
+.service_box_item:hover .service_box_item_step span {
+    background: linear-gradient(90deg, #24c6dc, #514a9d);
+    transform: scale(1.1);
+}
+
+/* 🎨 Vibrant h3 Titles */
+.service_box_item h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ff512f;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for h3 */
+.service_box_item:hover h3 {
+    color: #514a9d;
+}
+
+/* 📜 Floating Animation (Optional, Add to JS if Needed) */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.service_box_item {
+    animation: floating 3s infinite ease-in-out;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 50em) {
+    .service_box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 35em) {
+    .service {
+        width: 90%;
+    }
+
+    .service_box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
