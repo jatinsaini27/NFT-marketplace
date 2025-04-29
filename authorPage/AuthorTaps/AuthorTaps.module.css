@@ -1,0 +1,104 @@
+.AuthorTaps {
+    width: 100%;
+    margin: 8rem 0 3rem 0;
+}
+
+.AuthorTaps_box {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Add responsiveness */
+}
+
+.AuthorTaps_box_left_btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.AuthorTaps_box_left_btn button {
+    border: 1px solid var(--icons-color);
+    outline: none;
+    background-color: var(--main-bg-color);
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--icons-color);
+}
+
+/* Active tab styling */
+.AuthorTaps_box_left_btn button.active {
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+}
+
+/* Hover effect for all buttons */
+.AuthorTaps_box_left_btn button:hover {
+    opacity: 0.85;
+}
+
+.AuthorTaps_box_right {
+    position: relative;
+}
+
+.AuthorTaps_box_right_para {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    border: 1px solid var(--icons-color);
+    border-radius: 1.5rem;
+    width: 17.5rem;
+    padding: 0.6rem 1.5rem;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.AuthorTaps_box_right_para p {
+    font-size: 1.2rem;
+}
+
+
+
+.AuthorTaps_box_right_list {
+    background-color: var(--main-bg-color);
+    padding: 1rem;
+    width: 15rem;
+    position: absolute;
+    left: -3rem;
+    z-index: 11111;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: var(--box-shadow);
+    z-index:1111111111;
+}
+
+.AuthorTaps_box_right_list_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.AuthorTaps_box_right_list_item p {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.AuthorTaps_box_right_list_item:hover {
+    background-color: var(--icons-color);
+}
+
+.AuthorTaps_box_right_list_item:hover p {
+    color: var(--main-bg-color);
+}
+
+
+
